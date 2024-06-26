@@ -1,0 +1,522 @@
+lan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ python3.7 -m venv .devops
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ source .devops/bin/activate
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ python3.7 -m venv ~/.devops
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ deactivate
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ^C
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ source ~/.devops/bin/activate
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ make install
+# This should be run from inside a virtualenv
+pip install --upgrade pip &&\
+        pip install -r requirements.txt
+Requirement already satisfied: pip in /home/olan-sys-ubuntu/.devops/lib/python3.7/site-packages (23.0.1)
+Collecting pip
+  Using cached pip-24.0-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-24.0
+WARNING: There was an error checking the latest version of pip.
+Collecting Click==7.0 (from -r requirements.txt (line 1))
+  Using cached Click-7.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting Flask==1.0.2 (from -r requirements.txt (line 2))
+  Using cached Flask-1.0.2-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting itsdangerous==1.1.0 (from -r requirements.txt (line 3))
+  Using cached itsdangerous-1.1.0-py2.py3-none-any.whl.metadata (3.1 kB)
+Collecting Jinja2==2.10.3 (from -r requirements.txt (line 4))
+  Using cached Jinja2-2.10.3-py2.py3-none-any.whl.metadata (3.4 kB)
+Collecting MarkupSafe==1.1.1 (from -r requirements.txt (line 5))
+  Using cached MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl.metadata (3.2 kB)
+Collecting numpy==1.17.2 (from -r requirements.txt (line 6))
+  Using cached numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl.metadata (2.0 kB)
+Collecting pandas==0.24.2 (from -r requirements.txt (line 7))
+  Using cached pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl.metadata (4.5 kB)
+Collecting python-dateutil==2.8.0 (from -r requirements.txt (line 8))
+  Using cached python_dateutil-2.8.0-py2.py3-none-any.whl.metadata (7.6 kB)
+Collecting pytz==2019.3 (from -r requirements.txt (line 9))
+  Using cached pytz-2019.3-py2.py3-none-any.whl.metadata (20 kB)
+Collecting scikit-learn==0.20.3 (from -r requirements.txt (line 10))
+  Using cached scikit_learn-0.20.3-cp37-cp37m-manylinux1_x86_64.whl.metadata (7.4 kB)
+Collecting scipy==1.3.1 (from -r requirements.txt (line 11))
+  Using cached scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl.metadata (2.0 kB)
+Collecting six==1.12.0 (from -r requirements.txt (line 12))
+  Using cached six-1.12.0-py2.py3-none-any.whl.metadata (1.9 kB)
+Collecting Werkzeug==0.16.0 (from -r requirements.txt (line 13))
+  Using cached Werkzeug-0.16.0-py2.py3-none-any.whl.metadata (4.7 kB)
+Collecting pylint==2.4.4 (from -r requirements.txt (line 14))
+  Using cached pylint-2.4.4-py3-none-any.whl.metadata (6.5 kB)
+Collecting astroid<2.4,>=2.3.0 (from pylint==2.4.4->-r requirements.txt (line 14))
+  Using cached astroid-2.3.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting isort<5,>=4.2.5 (from pylint==2.4.4->-r requirements.txt (line 14))
+  Using cached isort-4.3.21-py2.py3-none-any.whl.metadata (19 kB)
+Collecting mccabe<0.7,>=0.6 (from pylint==2.4.4->-r requirements.txt (line 14))
+  Using cached mccabe-0.6.1-py2.py3-none-any.whl.metadata (4.3 kB)
+Collecting lazy-object-proxy==1.4.* (from astroid<2.4,>=2.3.0->pylint==2.4.4->-r requirements.txt (line 14))
+  Using cached lazy_object_proxy-1.4.3-cp37-cp37m-manylinux1_x86_64.whl.metadata (5.1 kB)
+Collecting wrapt==1.11.* (from astroid<2.4,>=2.3.0->pylint==2.4.4->-r requirements.txt (line 14))
+  Using cached wrapt-1.11.2-py3-none-any.whl
+Collecting typed-ast<1.5,>=1.4.0 (from astroid<2.4,>=2.3.0->pylint==2.4.4->-r requirements.txt (line 14))
+  Using cached typed_ast-1.4.3-cp37-cp37m-manylinux1_x86_64.whl.metadata (1.3 kB)
+Using cached Click-7.0-py2.py3-none-any.whl (81 kB)
+Using cached Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+Using cached itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Using cached Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+Using cached MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl (33 kB)
+Using cached numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl (20.3 MB)
+Using cached pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+Using cached python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+Using cached pytz-2019.3-py2.py3-none-any.whl (509 kB)
+Using cached scikit_learn-0.20.3-cp37-cp37m-manylinux1_x86_64.whl (5.4 MB)
+Using cached scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (25.2 MB)
+Using cached six-1.12.0-py2.py3-none-any.whl (10 kB)
+Using cached Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+Using cached pylint-2.4.4-py3-none-any.whl (302 kB)
+Using cached astroid-2.3.3-py3-none-any.whl (205 kB)
+Using cached lazy_object_proxy-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (56 kB)
+Using cached isort-4.3.21-py2.py3-none-any.whl (42 kB)
+Using cached mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Using cached typed_ast-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (743 kB)
+DEPRECATION: pandas 0.24.2 has a non-standard dependency specifier pytz>=2011k. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of pandas or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+Installing collected packages: wrapt, typed-ast, pytz, mccabe, Werkzeug, six, numpy, MarkupSafe, lazy-object-proxy, itsdangerous, isort, Click, scipy, python-dateutil, Jinja2, astroid, scikit-learn, pylint, pandas, Flask
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 astroid-2.3.3 isort-4.3.21 itsdangerous-1.1.0 lazy-object-proxy-1.4.3 mccabe-0.6.1 numpy-1.17.2 pandas-0.24.2 pylint-2.4.4 python-dateutil-2.8.0 pytz-2019.3 scikit-learn-0.20.3 scipy-1.3.1 six-1.12.0 typed-ast-1.4.3 wrapt-1.11.2
+
+[notice] A new release of pip is available: 24.0 -> 24.1
+[notice] To update, run: pip install --upgrade pip
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ make lint
+# See local hadolint install instructions:   https://github.com/hadolint/hadolint
+# This is linter for Dockerfiles
+hadolint Dockerfile
+# This is a linter for Python source code linter: https://www.pylint.org/
+# This should be run from inside a virtualenv
+pylint --disable=R,C,W1203,W1202 app.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ docker --version
+Docker version 20.10.17, build 100c70180f
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ python3.7 -m flask run
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [26/Jun/2024 20:37:43] "GET / HTTP/1.1" 200 -
+[2024-06-26 20:38:33,633] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2024-06-26 20:38:33,646] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:38:33,654] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:38:33,695] INFO in app: prediction: 
+[20.35373177134412]
+127.0.0.1 - - [26/Jun/2024 20:38:33] "POST /predict HTTP/1.1" 200 -
+^C(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes./run_docker.sh
+Sending build context to Docker daemon  752.6kB
+Step 1/1 : FROM python:3.7.3-stretch
+3.7.3-stretch: Pulling from library/python
+6f2f362378c5: Pull complete 
+494c27a8a6b8: Pull complete 
+7596bb83081b: Pull complete 
+372744b62d49: Pull complete 
+615db220d76c: Pull complete 
+39aa0c89bda1: Pull complete 
+ac275157d894: Pull complete 
+98d16dec829a: Pull complete 
+c8514b1c6524: Pull complete 
+Digest: sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779
+Status: Downloaded newer image for python:3.7.3-stretch
+ ---> 34a518642c76
+Successfully built 34a518642c76
+Successfully tagged myapp_proj4:latest
+REPOSITORY                  TAG             IMAGE ID       CREATED         SIZE
+myapp_prod3                 latest          50101d4c44d9   24 hours ago    1.61GB
+olaninnovator/myapp_prod3   latest          e426fa2bc989   32 hours ago    1.68GB
+myapp_prod1                 latest          19d3819f95b6   32 hours ago    1.68GB
+olaninnovator/myapp_prod1   latest          19d3819f95b6   32 hours ago    1.68GB
+myapp_prod2                 latest          ee431f7f2f31   34 hours ago    1.61GB
+<none>                      <none>          6ccd8850afdb   3 days ago      1.61GB
+python                      3.7             16d93ae3411b   11 months ago   994MB
+hadolint/hadolint           latest          da13a5ec2e84   19 months ago   2.43MB
+myapp_proj4                 latest          34a518642c76   5 years ago     929MB
+python                      3.7.3-stretch   34a518642c76   5 years ago     929MB
+Error response from daemon: conflict: unable to delete 6ccd8850afdb (must be forced) - image is being used by stopped container 270db647028f
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2024-06-26 20:45:28,103] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2024-06-26 20:45:28,115] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:45:28,122] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:45:28,161] INFO in app: prediction: 
+[20.35373177134412]
+127.0.0.1 - - [26/Jun/2024 20:45:28] "POST /predict HTTP/1.1" 200 -
+^C(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./upload_docker.sh
+Docker ID and Image: myapp_proj4:latest
+Authenticating with existing credentials...
+WARNING! Your password will be stored unencrypted in /home/olan-sys-ubuntu/snap/docker/2746/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/olaninnovator/myapp_proj4]
+799a7872c8c7: Mounted from library/python 
+715450468940: Mounted from library/python 
+c9d608035aef: Mounted from library/python 
+bb9c02680a15: Mounted from library/python 
+a637c551a0da: Mounted from library/python 
+2c8d31157b81: Mounted from library/python 
+7b76d801397d: Mounted from library/python 
+f32868cde90b: Mounted from library/python 
+0db06dff9d9a: Mounted from library/python 
+latest: digest: sha256:e3e087ca7fe013554b3a8b8d4088ab33a9f13af85b5c3f37cd4e69a8e53f14e1 size: 2218
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ minikube start
+😄  minikube v1.33.1 on Ubuntu 24.04
+✨  Automatically selected the docker driver
+📌  Using Docker driver with root privileges
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.44 ...
+💾  Downloading Kubernetes v1.30.0 preload ...
+    > preloaded-images-k8s-v18-v1...:  342.90 MiB / 342.90 MiB  100.00% 3.57 Mi
+    > gcr.io/k8s-minikube/kicbase...:  481.58 MiB / 481.58 MiB  100.00% 4.04 Mi
+🔥  Creating docker container (CPUs=2, Memory=3800MB) ...
+🐳  Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+    ▪ Generating certificates and keys ...
+    ▪ Booting up control plane ...
+    ▪ Configuring RBAC rules ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ^C
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kuberenets.sh
+bash: ./run_kuberenets.sh: No such file or directory
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ dir
+app.py      make_prediction.sh  __pycache__       run_docker.sh
+Dockerfile  model_data          README.md         run_kubernetes.sh
+Makefile    output_txt_files    requirements.txt  upload_docker.sh
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kuberenetes.sh
+bash: ./run_kuberenetes.sh: No such file or directory
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+olaninnovator/myapp_proj3:latest
+deployment.apps/python-mykubemetes created
+olaninnovator/myapp_proj3:latest
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           0s
+
+NAME                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-7797dbc8db   1         1         0       0s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   27m
+
+NAME                                      READY   STATUS              RESTARTS   AGE
+pod/python-mykubemetes-7797dbc8db-7mpz6   0/1     ContainerCreating   0          0s
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   27m   v1.30.0
+Error from server (NotFound): pods "aws-node-6l4pg" not found
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+olaninnovator/myapp_proj3:latest
+error: failed to create deployment: deployments.apps "python-mykubemetes" already exists
+olaninnovator/myapp_proj3:latest
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           50s
+
+NAME                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-7797dbc8db   1         1         0       50s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   28m
+
+NAME                                      READY   STATUS             RESTARTS   AGE
+pod/python-mykubemetes-7797dbc8db-7mpz6   0/1     ImagePullBackOff   0          50s
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   28m   v1.30.0
+Error from server (NotFound): pods "aws-node-6l4pg" not found
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+olaninnovator/myapp_proj3:latest
+error: failed to create deployment: deployments.apps "python-mykubemetes" already exists
+olaninnovator/myapp_proj3:latest
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           2m53s
+
+NAME                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-7797dbc8db   1         1         0       2m53s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   30m
+
+NAME                                      READY   STATUS             RESTARTS   AGE
+pod/python-mykubemetes-7797dbc8db-7mpz6   0/1     ImagePullBackOff   0          2m53s
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   30m   v1.30.0
+Error from server (NotFound): pods "python-mykubemetes" not found
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pod
+NAME                                  READY   STATUS             RESTARTS   AGE
+python-mykubemetes-7797dbc8db-7mpz6   0/1     ImagePullBackOff   0          3m41s
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+olaninnovator/myapp_proj3:latest
+error: failed to create deployment: deployments.apps "python-mykubemetes" already exists
+olaninnovator/myapp_proj3:latest
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           5m9s
+
+NAME                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-7797dbc8db   1         1         0       5m9s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   33m
+
+NAME                                      READY   STATUS             RESTARTS   AGE
+pod/python-mykubemetes-7797dbc8db-7mpz6   0/1     ImagePullBackOff   0          5m9s
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   33m   v1.30.0
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ^C
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl describe nodes python-mykubemetes-7797dbc8db-7mpz6
+Error from server (NotFound): nodes "python-mykubemetes-7797dbc8db-7mpz6" not found
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get nodes
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   38m   v1.30.0
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl describe nodes minikube
+Name:               minikube
+Roles:              control-plane
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=minikube
+                    kubernetes.io/os=linux
+                    minikube.k8s.io/commit=5883c09216182566a63dff4c326a6fc9ed2982ff
+                    minikube.k8s.io/name=minikube
+                    minikube.k8s.io/primary=true
+                    minikube.k8s.io/updated_at=2024_06_26T21_07_48_0700
+                    minikube.k8s.io/version=v1.33.1
+                    node-role.kubernetes.io/control-plane=
+                    node.kubernetes.io/exclude-from-external-load-balancers=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/cri-dockerd.sock
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 26 Jun 2024 21:07:45 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  minikube
+  AcquireTime:     <unset>
+  RenewTime:       Wed, 26 Jun 2024 21:46:48 +0100
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Wed, 26 Jun 2024 21:43:50 +0100   Wed, 26 Jun 2024 21:07:44 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Wed, 26 Jun 2024 21:43:50 +0100   Wed, 26 Jun 2024 21:07:44 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Wed, 26 Jun 2024 21:43:50 +0100   Wed, 26 Jun 2024 21:07:44 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Wed, 26 Jun 2024 21:43:50 +0100   Wed, 26 Jun 2024 21:07:47 +0100   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.49.2
+  Hostname:    minikube
+Capacity:
+  cpu:                22
+  ephemeral-storage:  38515064Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             15808616Ki
+  pods:               110
+Allocatable:
+  cpu:                22
+  ephemeral-storage:  38515064Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             15808616Ki
+  pods:               110
+System Info:
+  Machine ID:                 528c1211bb454002a90cb6e107f91680
+  System UUID:                82e801e5-2134-461c-9f68-6ae425a6e95a
+  Boot ID:                    28fb6840-a13a-4f93-a722-68142ad77594
+  Kernel Version:             6.8.0-35-generic
+  OS Image:                   Ubuntu 22.04.4 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://26.1.1
+  Kubelet Version:            v1.30.0
+  Kube-Proxy Version:         v1.30.0
+PodCIDR:                      10.244.0.0/24
+PodCIDRs:                     10.244.0.0/24
+Non-terminated Pods:          (8 in total)
+  Namespace                   Name                                   CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                   ------------  ----------  ---------------  -------------  ---
+  default                     python-mykubemetes-7797dbc8db-7mpz6    0 (0%)        0 (0%)      0 (0%)           0 (0%)         11m
+  kube-system                 coredns-7db6d8ff4d-756zf               100m (0%)     0 (0%)      70Mi (0%)        170Mi (1%)     38m
+  kube-system                 etcd-minikube                          100m (0%)     0 (0%)      100Mi (0%)       0 (0%)         39m
+  kube-system                 kube-apiserver-minikube                250m (1%)     0 (0%)      0 (0%)           0 (0%)         39m
+  kube-system                 kube-controller-manager-minikube       200m (0%)     0 (0%)      0 (0%)           0 (0%)         39m
+  kube-system                 kube-proxy-2jdll                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         38m
+  kube-system                 kube-scheduler-minikube                100m (0%)     0 (0%)      0 (0%)           0 (0%)         39m
+  kube-system                 storage-provisioner                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         39m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                750m (3%)   0 (0%)
+  memory             170Mi (1%)  170Mi (1%)
+  ephemeral-storage  0 (0%)      0 (0%)
+  hugepages-1Gi      0 (0%)      0 (0%)
+  hugepages-2Mi      0 (0%)      0 (0%)
+Events:
+  Type    Reason                   Age                From             Message
+  ----    ------                   ----               ----             -------
+  Normal  Starting                 38m                kube-proxy       
+  Normal  Starting                 39m                kubelet          Starting kubelet.
+  Normal  NodeHasSufficientMemory  39m (x8 over 39m)  kubelet          Node minikube status is now: NodeHasSufficientMemory
+  Normal  NodeHasNoDiskPressure    39m (x8 over 39m)  kubelet          Node minikube status is now: NodeHasNoDiskPressure
+  Normal  NodeHasSufficientPID     39m (x7 over 39m)  kubelet          Node minikube status is now: NodeHasSufficientPID
+  Normal  NodeAllocatableEnforced  39m                kubelet          Updated Node Allocatable limit across pods
+  Normal  Starting                 39m                kubelet          Starting kubelet.
+  Normal  NodeAllocatableEnforced  39m                kubelet          Updated Node Allocatable limit across pods
+  Normal  NodeHasSufficientMemory  39m                kubelet          Node minikube status is now: NodeHasSufficientMemory
+  Normal  NodeHasNoDiskPressure    39m                kubelet          Node minikube status is now: NodeHasNoDiskPressure
+  Normal  NodeHasSufficientPID     39m                kubelet          Node minikube status is now: NodeHasSufficientPID
+  Normal  NodeNotReady             39m                kubelet          Node minikube status is now: NodeNotReady
+  Normal  NodeReady                39m                kubelet          Node minikube status is now: NodeReady
+  Normal  RegisteredNode           38m                node-controller  Node minikube event: Registered Node minikube in Controller
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+olaninnovator/myapp_proj3:latest
+error: failed to create deployment: deployments.apps "python-mykubemetes" already exists
+olaninnovator/myapp_proj3:latest
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           12m
+
+NAME                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-7797dbc8db   1         1         0       12m
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   39m
+
+NAME                                      READY   STATUS             RESTARTS   AGE
+pod/python-mykubemetes-7797dbc8db-7mpz6   0/1     ImagePullBackOff   0          12m
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   40m   v1.30.0
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl port-forward pod/python-mykubemetes-7797dbc8db-7mpz6 --address 127.0.0.1 8888:5000
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl port-forward pod/python-mykubemetes-7797dbc8db-7mpz6 --address 0.0.0.0 8888:5000
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl port-forward pods/python-mykubemetes-7797dbc8db-7mpz6 --address 0.0.0.0 8888:5000
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl version
+Client Version: v1.30.2
+Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+Server Version: v1.30.0
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ minikube delete
+🔥  Deleting "minikube" in docker ...
+🔥  Deleting container "minikube" ...
+🔥  Removing /home/olan-sys-ubuntu/.minikube/machines/minikube ...
+💀  Removed all traces of the "minikube" cluster.
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ minikube stop
+🤷  Profile "minikube" not found. Run "minikube profile list" to view all profiles.
+👉  To start a cluster, run: "minikube start"
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ minikube start
+😄  minikube v1.33.1 on Ubuntu 24.04
+✨  Automatically selected the docker driver
+📌  Using Docker driver with root privileges
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.44 ...
+🔥  Creating docker container (CPUs=2, Memory=3800MB) ...
+🐳  Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+    ▪ Generating certificates and keys ...
+    ▪ Booting up control plane ...
+    ▪ Configuring RBAC rules ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl config view
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/olan-sys-ubuntu/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Wed, 26 Jun 2024 22:02:21 BST
+        provider: minikube.sigs.k8s.io
+        version: v1.33.1
+      name: cluster_info
+    server: https://192.168.49.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Wed, 26 Jun 2024 22:02:21 BST
+        provider: minikube.sigs.k8s.io
+        version: v1.33.1
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /home/olan-sys-ubuntu/.minikube/profiles/minikube/client.crt
+    client-key: /home/olan-sys-ubuntu/.minikube/profiles/minikube/client.key
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+olaninnovator/myapp_proj3:latest
+deployment.apps/python-mykubemetes created
+olaninnovator/myapp_proj3:latest
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           0s
+
+NAME                                           DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-6bccb996b   1         1         0       0s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   10m
+
+NAME                                     READY   STATUS              RESTARTS   AGE
+pod/python-mykubemetes-6bccb996b-fdlqn   0/1     ContainerCreating   0          0s
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   10m   v1.30.0
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+olaninnovator/myapp_proj3:latest
+olaninnovator/myapp_proj3:latest
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           2m14s
+
+NAME                                           DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-6bccb996b   1         1         0       2m14s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   12m
+
+NAME                                     READY   STATUS             RESTARTS   AGE
+pod/python-mykubemetes-6bccb996b-fdlqn   0/1     ImagePullBackOff   0          2m14s
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   12m   v1.30.0
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get deploy,rs,svc,pods
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/python-mykubemetes   0/1     1            0           4m34s
+
+NAME                                           DESIRED   CURRENT   READY   AGE
+replicaset.apps/python-mykubemetes-6bccb996b   1         1         0       4m34s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   15m
+
+NAME                                     READY   STATUS             RESTARTS   AGE
+pod/python-mykubemetes-6bccb996b-fdlqn   0/1     ImagePullBackOff   0          4m34s
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/proje

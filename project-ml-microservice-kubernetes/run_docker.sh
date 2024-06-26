@@ -4,8 +4,8 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build -t myapp_proj4 .
-docker tag myapp_proj4 myapp_proj4:latest
+docker build -t myapp_proj44 .
+docker tag myapp_proj44 myapp_proj44:latest
 
 # Step 2: 
 # List docker images

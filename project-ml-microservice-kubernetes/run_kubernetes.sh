@@ -4,12 +4,12 @@
 
 # Step 1:
 # This is your Docker ID/path
-dockerpath="olaninnovator/myapp_proj3:latest"
+dockerpath="olaninnovator/myapp_proj44:latest"
 
 echo $dockerpath
 # Step 2
 # Run the Docker Hub container with kubernetes
-#kubectl create deploy python-mykubemetes --image=$dockerpath
+kubectl create deploy python-mykubemetes --image=$dockerpath
 echo $dockerpath
 
 ## See the status
@@ -22,4 +22,4 @@ kubectl get nodes
 #aws-node-6l4pg
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward deployment.apps/python-mykubemetes --address 0.0.0.0 5000:5000
+kubectl port-forward pod/python-mykubemetes-7ff845bbdc-v5jxp --address 127.0.0.1 8008:5001

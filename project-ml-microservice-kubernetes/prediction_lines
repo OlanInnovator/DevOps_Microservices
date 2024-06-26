@@ -1,0 +1,25 @@
+lan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ curl http://127.0.0.1:5000/
+<h3>Sklearn Prediction Home</h3>olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/proj./make_prediction.sh
+Port: 8000
+curl: (7) Failed to connect to localhost port 8000 after 0 ms: Couldn't connect to server
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 5000
+{"prediction":[20.35373177134412]}
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 5000
+{"prediction":[20.35373177134412]}
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ^C
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ git clean
+fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ git clean -f
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ git config --global pull.rebase false  # merge
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ git pull
+CONFLICT (modify/delete): project-ml-microservice-kubernetes/Dockerfile deleted in d486a252b3c1bca47bc6bdf1a2ade4e3e17ccb4f and modified in HEAD.  Version HEAD of project-ml-microservice-kubernetes/Dockerfile left in tree.
+CONFLICT (modify/delete): project-ml-microservice-kubernetes/app.py deleted in d486a252b3c1bca47bc6bdf1a2ade4e3e17ccb4f and modified in HEAD.  Version HEAD of project-ml-microservice-kubernetes/app.py left in tree.
+CONFLICT (modify/delete): project-ml-microservice-kubernetes/make_prediction.sh deleted in d486a252b3c1bca47bc6bdf1a2ade4e3e17ccb4f and modified in HEAD.  Version HEAD of project-ml-microservice-kubernetes/make_prediction.sh left in tree.
+CONFLICT (modify/delete): project-ml-microservice-kubernetes/output_txt_files/docker_out.txt deleted in d486a252b3c1bca47bc6bdf1a2ade4e3e17ccb4f and modified in HEAD.  Version HEAD of project-ml-microservice-kubernetes/output_txt_files/docker_out.txt left in tree.
+CONFLICT (modify/delete): project-ml-microservice-kubernetes/run_docker.sh deleted in d486a252b3c1bca47bc6bdf1a2ade4e3e17ccb4f and modified in HEAD.  Version HEAD of project-ml-microservice-kubernetes/run_docker.sh left in tree.
+CONFLICT (modify/delete): project-ml-microservice-kubernetes/run_kubernetes.sh deleted in d486a252b3c1bca47bc6bdf1a2ade4e3e17ccb4f and modified in HEAD.  Version HEAD of project-ml-microservice-kubernetes/run_kubernetes.sh left in tree.
+CONFLICT (modify/delete): project-ml-microservice-kubernetes/upload_docker.sh deleted in d486a252b3c1bca47bc6bdf1a2ade4e3e17ccb4f and modified in HEAD.  Version HEAD of project-ml-microservice-kubernetes/upload_docker.sh left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ AAAAAAAAAAAAAAA

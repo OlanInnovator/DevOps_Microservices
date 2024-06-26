@@ -1,1 +1,92 @@
 <paste log output from Docker prediction, here>
+
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ make lint
+# See local hadolint install instructions:   https://github.com/hadolint/hadolint
+# This is linter for Dockerfiles
+hadolint Dockerfile
+# This is a linter for Python source code linter: https://www.pylint.org/
+# This should be run from inside a virtualenv
+pylint --disable=R,C,W1203,W1202 app.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ docker --version
+Docker version 20.10.17, build 100c70180f
+(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ python3.7 -m flask run
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [26/Jun/2024 20:37:43] "GET / HTTP/1.1" 200 -
+[2024-06-26 20:38:33,633] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2024-06-26 20:38:33,646] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:38:33,654] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:38:33,695] INFO in app: prediction: 
+[20.35373177134412]
+127.0.0.1 - - [26/Jun/2024 20:38:33] "POST /predict HTTP/1.1" 200 -
+^C(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes./run_docker.sh
+Sending build context to Docker daemon  752.6kB
+Step 1/1 : FROM python:3.7.3-stretch
+3.7.3-stretch: Pulling from library/python
+6f2f362378c5: Pull complete 
+494c27a8a6b8: Pull complete 
+7596bb83081b: Pull complete 
+372744b62d49: Pull complete 
+615db220d76c: Pull complete 
+39aa0c89bda1: Pull complete 
+ac275157d894: Pull complete 
+98d16dec829a: Pull complete 
+c8514b1c6524: Pull complete 
+Digest: sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779
+Status: Downloaded newer image for python:3.7.3-stretch
+ ---> 34a518642c76
+Successfully built 34a518642c76
+Successfully tagged myapp_proj4:latest
+REPOSITORY                  TAG             IMAGE ID       CREATED         SIZE
+myapp_prod3                 latest          50101d4c44d9   24 hours ago    1.61GB
+olaninnovator/myapp_prod3   latest          e426fa2bc989   32 hours ago    1.68GB
+myapp_prod1                 latest          19d3819f95b6   32 hours ago    1.68GB
+olaninnovator/myapp_prod1   latest          19d3819f95b6   32 hours ago    1.68GB
+myapp_prod2                 latest          ee431f7f2f31   34 hours ago    1.61GB
+<none>                      <none>          6ccd8850afdb   3 days ago      1.61GB
+python                      3.7             16d93ae3411b   11 months ago   994MB
+hadolint/hadolint           latest          da13a5ec2e84   19 months ago   2.43MB
+myapp_proj4                 latest          34a518642c76   5 years ago     929MB
+python                      3.7.3-stretch   34a518642c76   5 years ago     929MB
+Error response from daemon: conflict: unable to delete 6ccd8850afdb (must be forced) - image is being used by stopped container 270db647028f
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2024-06-26 20:45:28,103] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2024-06-26 20:45:28,115] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:45:28,122] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2024-06-26 20:45:28,161] INFO in app: prediction: 
+[20.35373177134412]
+127.0.0.1 - - [26/Jun/2024 20:45:28] "POST /predict HTTP/1.1" 200 -
+^C(.devops) olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-
+
+prediction
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ curl http://127.0.0.1:5000/
+<h3>Sklearn Prediction Home</h3>olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/proj./make_prediction.sh
+Port: 8000
+curl: (7) Failed to connect to localhost port 8000 after 0 ms: Couldn't connect to server
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 5000
+{"prediction":[20.35373177134412]}
+olan-sys-ubuntu@olan-sys-ubuntu-Inspiron-16-Plus-7640:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 5000
+{"prediction":[20.35373177134412]}

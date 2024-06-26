@@ -4,9 +4,14 @@
 
 # Step 1:
 # Build image and add a descriptive tag
+docker build -t myapp_proj4 .
+docker tag myapp_proj4 myapp_proj4:latest
 
 # Step 2: 
 # List docker images
+docker image ls
+docker rmi $(docker images -f "dangling=true" -q)
 
 # Step 3: 
 # Run flask app
+python3.7 -m flask run
